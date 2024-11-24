@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Ambulance - AmbuRide</title>
+    <link rel="stylesheet" href="../CSS/tack.css">
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" >
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">AmbuRide</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../HTML/booking.html">Book Ambulance</a></li>
+                <li><a href="../HTML/tracking.html">Track Ambulance</a></li>
+                <li><a href="../HTML/help.html">Help Center</a></li>
+                <li><a href="../HTML/how.html" >How it Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tracking-section">
+        <h2>Track Your Ambulance</h2>
+        <div class="map-placeholder">
+            <p>Map Loading...</p>
+        </div>
+    </section>
+    <div id="map" ></div>
+
+    <script>
+        // Initialize the map centered on an arbitrary location
+        var map = L.map('map').setView([51.505, -0.09], 13); // Centered on London
+
+        // Set up the OSM tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Create a marker that will be updated with the user's location
+        var userMarker = L.marker([51.505, -0.09]).addTo(map);
+
+        // Function to handle live location updates
+        function updateLocation(position) {
+            var lat = position.coords.latitude;
+            var lon = position.coords.longitude;
+
+            // Move the marker to the new location
+            userMarker.setLatLng([lat, Ind]);
+
+            // Center the map on the new location
+            map.setView([lat, Ind], 12);
+        }
+
+        // If the browser supports geolocation, start watching the user's position
+        if (navigator.geolocation) {
+            navigator.geolocation.watchPosition(updateLocation, function(error) {
+                console.error('Error getting location: ', error);
+            }, {
+                enableHighAccuracy: true
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    </script>
+
+      
+      
+
+    <footer>
+        <p>© 2024R EmsRide. All rights reserved.</p>
+    </footer>
+  
+      
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book an Ambulance - AmbuRide</title>
+    <link rel="stylesheet" href="../CSS/booking.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">EMS</div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../HTML/booking.html">Book Ambulance</a></li>
+                <li><a href="../HTML/tracking.html">Track Ambulance</a></li>
+                <li><a href="../HTML/help.html">Help Center</a></li>
+                <li><a href="../HTML/how.html" >How it Work</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <h2>Save Your Life  
+             </h2>
+        <form id="booking-form">
+            <label for="pickup">Pickup Location:</label>
+            <input type="text" id="pickup" placeholder="Enter your location" required>
+
+            <label for="destination">Destination:</label>
+            <input type="text" id="destination" placeholder="Enter hospital/clinic name" required>
+
+            <label for="ambulance-type"> Type:</label>
+            <select id="ambulance-type">
+                <option value="basic">Basic</option>
+                <option value="advanced">Advanced</option>
+                <option value="icu">ICU</option>
+            </select>
+
+            <button type="submit">Confirm Booking</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 EmsRide. All rights reserved.</p>
+    </footer>
+    <script src="../model/booking.js" defer></script>
+</body>
+
+</html>
