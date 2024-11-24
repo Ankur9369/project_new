@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #fff;
+    background: url('your-beautiful-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00c6ff;
+    text-transform: uppercase;
+}
+
+header .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+header .nav-links a:hover {
+    color: #00c6ff;
+    border-bottom: 2px solid #00c6ff;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 100px; /* Adjust for fixed header */
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero .cta-button:hover {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    transform: scale(1.05);
+}
+
+/* Footer Styling */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #fff;
+}
+
+footer p a {
+    color: #00c6ff;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
+}
